@@ -2,6 +2,7 @@ import crypto from "crypto";
 
 const SECRET = "RYAN-API";
 
+// Crypt creates a hashed string for authetication
 export const random = () => crypto.randomBytes(128).toString("base64");
 export const authentication = (salt: string, password: string) => {
   return crypto
